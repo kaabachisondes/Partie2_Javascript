@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple avec les boucles</title>
+</head>
+<body>
+    <!--zone d'affichage -->
+    <pre id="output"></pre>
+    <script>
+        // recuperation de la zone d'affichage
+        const output=document.getElementById('output');
+        //function pour ajouter texte dans la zone d'affichage
+        function afficher(text){
+            output.textContent += text + '\n';
+        }
+        // declaration d'un tableau
+        let fruits=['Pomme','Banane','cerise'];
+        // declaration d'un tableau 2D
+        let matrice=[
+            [1,2],
+            [3,4],
+            [5,6]
+        ];
+        afficher("Boucle classique de tableau :");
+        //affichage de l'element a l'indice i
+        for(let i=0;i<fruits.length;i++){
+            afficher(`fruits[${i}] = ${fruits[i]}`);
+
+        }
+        //ligne vide
+        afficher('');
+        //affichage de 2 eme element de la matrice
+        for(let i=0;i<matrice.length;i++)// lignes : longueur de matrice 3 et les positions 0,1 et 2
+        {
+            for(let j=0;j<matrice[i].length;j++)// colonnes :position 0 et 1
+            {
+                console.log(matrice[i][j]);
+            }
+        }
+    </script>
+       
+      
+ 
+
+</body>
+</html>

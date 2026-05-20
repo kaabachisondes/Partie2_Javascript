@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exemple de manipulation du DOM</title>
+</head>
+<body>
+    <!--titre avec identifiant-->
+    <h1 id="monTitre">Titre original</h1>
+    <!--paragraphe avec une classe specifique-->
+    <p class="maClasse">Paragraphe 1 </p>
+    <p class="maClasse">Paragraphe 2 </p>
+    <!--paragraphe sans classe specifique-->
+    <p>Paragraphe sans classe </p>
+    <!--image avec attribut src-->
+    <img src="bob.png"alt="image initiliale" width="200">
+    <hr>
+     <!--bouton pour declancher la fonction de manipulation de  dom-->
+     <button onclick="manipulerDom()">Manipuler le DOM</button>
+     <script>
+        function manipulerDom(){
+            // selection d'un element par id
+            const titre=document.getElementById('monTitre');
+            console.log("Par id: ",titre);
+            // selction de tous les elements ayant la classe maClasse
+            const elementsClasse=document.getElementsByClassName('maClasse');
+            console.log("Par classe: ",elementsClasse);
+        }
+        </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de tableau avec javascript</title>
+    <style>
+        #output {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemple de tableau avec javascript</h1>
+    <!--balise pre pour afficher resultat-->
+    <pre id="output"></pre>
+    <!--integration de javascript-->
+    <script>
+        //function pour ajouter le texte dans la zone pre 
+        function afficher(text){
+            const pre =document.getElementById('output');
+            pre.textContent += text + '\n';
+        }
+        function afficherTabelau(arr){
+            afficher(arr.join(', '));//join transforme le tabbleau en chaine
+        }
+        //creation d'un tableau avec 3 elements
+        let array=['Siwar','Amira','Sarra'];
+        //affichage du tableau
+        afficher("1er elem: " + array[0]);
+        afficher("3eme elem: " + array[2]);
+        //ajout d'un element a la fin du tableau
+        array.push('Yosra');
+        afficher("Tableau apres ajout: ");
+        afficherTabelau(array);
+        //suppression du dernier element du tableau
+        array.pop();
+        afficher("Tableau apres suppression: ");
+        afficherTabelau(array);
+        // ajout d'un element au debut du tableau
+        array.unshift('Yosra'); 
+        afficher("Tableau apres ajout au debut: ");
+        afficherTabelau(array);
+        
+        // ajout chaima a la position 2
+        array.splice(2,0,'Chaima');
+
+        afficher("Tableau apres ajout de chaima a la position 2: ");
+        afficherTabelau(array);
+        
+
+    </script>
+    
+</body>
+</html>

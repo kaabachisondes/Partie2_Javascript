@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple do - while</title>
+</head>
+<body>
+    <h1>Exemple de boucle <code>do - while</code></h1>
+    <!--zone d'affichage -->
+    <div id="resultat">
+        <script>
+            let animaux=['Chat','Chien','Lapin','Oiseau'];
+            //recuperation de la zone d'affichage
+            let affichage=document.getElementById('resultat');
+            //inisilisation de la variable de controle i à 0
+            let i=0;
+            do{
+                affichage.innerHTML +=`<p> animaux[${i}] : ${animaux[i]} </p>`;
+                i++;
+
+            }
+            while(i<animaux.length);
+               
+        </script>
+
+    </div>
+
+    
+</body>
+</html>
